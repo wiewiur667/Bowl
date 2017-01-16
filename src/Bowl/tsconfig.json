@@ -1,0 +1,28 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "removeComments": false,
+    "sourceMap": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "target": "es5",
+    "outDir": "Scripts/Build"
+  },
+  "awesomeTypescriptLoaderOptions": {
+    "useWebpackText": true // Allows other loaders to be chained to awesome-typescript-loader.
+  },
+  "filesGlob": [
+    "Scripts/Sources/**/*{.ts,.d.ts}"
+  ],
+  "files": [
+    "Scripts/Sources/app.component.ts",
+    "Scripts/Sources/app.module.ts",
+    "Scripts/Sources/main.ts",
+    "Scripts/Sources/rxjs-operators.ts"
+  ]
+
+}

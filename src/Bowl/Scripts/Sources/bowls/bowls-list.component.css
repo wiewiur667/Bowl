@@ -1,0 +1,94 @@
+﻿.add-btn {
+    position:fixed;
+    bottom:5em;
+    right:5em;
+}
+
+.add-btn button {
+    width:60px;
+    height:60px;
+    background-color: #003e63;
+    border-radius:30px;
+    border:none;
+    color:white;
+    font-size:16pt;
+}
+
+.add-btn button:hover{
+    background-color: #19455e;
+}
+
+.add-btn button:focus {
+    background-color: #19455e;
+    outline:0;
+}
+
+.item .item-panel {
+}
+
+.item-panel .panel-body{
+    min-height:120px;
+}
+
+.item-panel .panel-heading{
+    background-color:transparent;
+    border:none;
+}
+
+.item-panel .panel-footer {
+
+    border:none;
+    border-radius:0;
+    background-color: #003e63;
+
+    height:40px;
+    text-align:center;
+
+}
+
+.item-panel .panel-footer button {
+    font-size:14pt;
+    font-weight:bold;
+    margin-top:-10px;
+    color:white;
+}
+
+/*
+.panel .panel-footer{
+    height:40px;
+    border:none;
+    border-radius:0;
+    background-color: #003e63;
+
+    font-size:14pt;
+    font-weight:bold;
+
+    text-align:center;
+    vertical-align:central;
+    padding:0;
+    padding-top:8px;
+    color:white;
+}
+
+.panel .panel-body {
+    color:#00314d;
+}
+
+.table {
+    margin-top:0;
+    border:none;
+}
+
+.table td, .table th{
+    border:none;
+    font-size: 10pt;
+}
+
+.panel .panel-heading {
+    background-color:white;
+    border:none;
+    color:#515151;
+    font-size:12pt;
+
+}
+    */

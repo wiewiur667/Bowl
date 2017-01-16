@@ -1,0 +1,117 @@
+﻿<div id="lowFood" class="modal fade" role="dialog" #alertModal>
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Low food level</h4>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="container-fluid custom-container">
+
+    <div class="row">
+        <div class="col-xs-12 container-header">
+            <h1>{{bowl?.name}}</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="form-group" [hidden]="this.bowl" *ngIf="!this.notFound">
+                <div class="col-md-12 text-center">
+                    <span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span>
+                </div>
+            </div>
+            <div class="form-group" *ngIf="this.notFound">
+                <div class="col-md-12 text-center">
+                    <span class="alert alert-danger">Bowl not found</span>
+                </div>
+            </div>
+
+            <div [hidden]="!this.bowl" class="form-group">
+                <div class="row">
+                    <div class="col-xs-12" *ngIf="!this.bowlDetailsForm.valid"><span style="color:red">Please correct all required fields highlighted in red</span></div>
+                    <div class="col-xs-12">
+                        <div class="row">
+                            <div class="col-sm-2 col-xs-4">
+                                Distributing:
+                            </div>
+                            <div class="col-sm-1 col-xs-1">
+                                <i [attr.class]="distributing ? 'fa fa-circle' : 'fa fa-circle-o'" style="color:darkorange;"></i>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2 col-xs-4">
+                                Open:
+                            </div>
+                            <div class="col-sm-2 col-xs-2">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" (change)="getCheckbox($event)" [attr.checked]="bowl?.open ? true : null">
+                                    <label class="onoffswitch-label" for="myonoffswitch">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2 col-xs-4">
+                                Food amount:
+                            </div>
+                            <div class="col-sm-1 col-xs-1">
+                                <span>{{bowl?.foodAmount | number : '1.2-4'}}</span><span>kg</span>
+                            </div>
+                        </div>
+                        <div class="row equal">
+                            <div class="col-xs-12 col-md-4">
+                                <form novalidate [formGroup]="bowlDetailsForm">
+                                    <input type="hidden" formControlName="id" />
+                                    <input type="hidden" formControlName="foodAlert" />
+                                    <div class="form-group">
+                                        <span for="name">*Name:</span>
+                                        <editable-label typeof="text" formControlName="name" [ngClass]="{'has-error': !bowlDetailsForm.controls['name'].valid}"></editable-label>
+                                        <span *ngIf="this.bowl != null && !this.bowlDetailsForm.controls['name'].valid" class="small" style="color:red">Please fill in. Minimum 3 characters</span>
+                                    </div>
+                                    <div class="form-group">
+                                        <span for="location">*Location:</span>
+                                        <editable-label typeof="text" formControlName="location" [ngClass]="{'has-error': !bowlDetailsForm.controls['location'].valid}"></editable-label>
+                                        <span *ngIf="this.bowl != null && !this.bowlDetailsForm.controls['location'].valid" class="small" style="color:red">Please fill in. Minimum 3 characters</span>
+                                    </div>
+                                    <div class="form-group">
+                                        <span for="foodName">*Food name:</span>
+                                        <editable-label typeof="text" formControlName="foodName" [ngClass]="{'has-error': !bowlDetailsForm.controls['foodName'].valid}"></editable-label>
+                                        <span *ngIf="this.bowl != null && !this.bowlDetailsForm.controls['foodName'].valid" class="small" style="color:red">Please fill in. Minimum 3 characters</span>
+                                    </div>
+                                    <span style="color:red">*required field</span>
+                                </form>
+                            </div>
+                            <div class="col-md-3 col-xs-12">
+                                <div class="row">
+                                    <div id="foodSliderContainer" class="col-xs-4" style="padding:20px;">
+                                        <span>Food alert amount</span>
+                                        <div id="foodSlider" #foodSlider>
+                                            <div id="customHandle" class="ui-slider-handle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12" style="margin-bottom:20px;">
+            <button class="btn btn-default pull-right" (click)="close()">Done</button>
+        </div>
+    </div>
+</div>

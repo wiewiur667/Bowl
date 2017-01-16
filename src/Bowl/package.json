@@ -1,0 +1,49 @@
+{
+  "version": "1.0.0",
+  "name": "asp.net",
+  "private": true,
+  "scripts": {
+    "start": "webpack --config webpack.config.js"
+  },
+  "dependencies": {
+    "@angular/common": "~2.4.0",
+    "@angular/compiler": "~2.4.0",
+    "@angular/core": "~2.4.0",
+    "@angular/forms": "~2.4.0",
+    "@angular/http": "~2.4.0",
+    "@angular/platform-browser": "~2.4.0",
+    "@angular/platform-browser-dynamic": "~2.4.0",
+    "@angular/router": "~3.4.0",
+    "core-js": "^2.4.1",
+    "reflect-metadata": "0.1.9",
+    "requirejs": "2.3.2",
+    "rxjs": "5.0.3",
+    "zone.js": "^0.7 .4",
+    "es6-shim": "0.35.2",
+    "ng2-charts": "1.4.4",
+    "angular2-modal": "2.0.2"
+  },
+  "devDependencies": {
+    "@types/core-js": "0.9.34",
+    "@types/jquery": "2.0.34",
+    "@types/jqueryui": "1.11.31",
+    "@types/node": "6.0.52",
+    "@types/webpack": "2.1.0",
+    "@types/jasmine": "2.5.40",
+    "del": "2.2.2",
+    "gulp": "3.9.1",
+    "gulp-sourcemaps": "2.3.0",
+    "gulp-watch": "4.3.11",
+    "gulp-tslint": "7.0.1",
+    "gulp-typescript": "3.1.4",
+    "gulp-typings": "2.0.4",
+    "tsconfig-glob": "0.4.3",
+    "webpack": "1.14.0",
+    "webpack-stream": "3.2.0",
+    "awesome-typescript-loader": "3.0.0-beta.18",
+    "angular2-template-loader": "0.6.0",
+    "raw-loader": "0.5.1"
+
+
+  }
+}

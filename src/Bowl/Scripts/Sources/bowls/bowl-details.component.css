@@ -1,0 +1,167 @@
+﻿.container-header{
+    background-color:#003E63;
+    display:block;
+    text-align:center;
+    margin-bottom:25px;
+    color:white;
+}
+
+.custom-container-form{
+    padding:50px;
+}
+
+.equal {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.equal > div[class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
+
+/**Loading Icon*/
+.glyphicon-refresh-animate {
+    -o-animation: spin .7s infinite linear;
+    -webkit-animation: spinw .7s infinite linear;
+    -moz-animation: spinm .7s infinite linear;
+    animation: spin .7s infinite linear;
+}
+
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg);}
+    to { transform: scale(1) rotate(360deg);}
+}
+
+@-webkit-keyframes spinw {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes spinm {
+    from {
+        -moz-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -moz-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+/**Slider styling*/
+
+.ui-slider .ui-slider-handle {
+    width:50px;
+    height:1.6em;
+    margin-left: 2em;
+    margin-bottom:-1em;
+    background-color: #dedede;
+    border-radius:0 0, 0.8em, 0.8em;
+    border-width:0;
+    text-align:center;
+    display:block;
+}
+
+.ui-slider .ui-slider-handle::before {
+    width:35px;
+    height:1.6em;
+    border-right:10px solid #dedede;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    content: " ";
+    position:absolute;
+    left:-35px;
+    top: 0em;
+}
+
+#foodSlider {
+    height:201px;
+    width:10px;
+}
+
+#foodSliderContainer {
+    margin-top:-89px;
+}
+
+@media only screen and (max-width:992px){
+
+    #foodSlider {
+        height:10px;
+        width:200px;
+        margin-top:10px;
+    }
+
+    #foodSliderContainer {
+        margin-top:0;
+    }
+
+    .ui-slider .ui-slider-handle {
+        margin-left:10px;
+        margin-top:-3px;
+    }
+}
+.ui-slider .ui-slider-handle:focus{
+    outline:none;
+}
+
+/**Locked ToggleSwitch*/
+
+.onoffswitch {
+    position: relative;
+    width: 76px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 10px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 20px; padding: 0; line-height: 20px;
+    font-size: 11px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "Locked";
+    padding-left: 10px;
+    background-color: #003E63; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "Unlocked";
+    padding-right: 8px;
+    background-color: #FFFFFF; color: #757575;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 10px; margin: 5px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 56px;
+    border: 2px solid #999999; border-radius: 10px;
+    transition: all 0.3s ease-in 0s;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px;
+}
+
+
+

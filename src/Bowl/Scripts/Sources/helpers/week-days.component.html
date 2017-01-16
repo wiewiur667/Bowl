@@ -1,0 +1,11 @@
+﻿<div class="row">
+    <div class="col-xs-12">
+        <div class="checkbox-inline"><label class="checkbox checkbox-inline" [class.disabled]="disabled"><input type="checkbox" (change)="parseValue(1, $event)" [attr.checked]="selected[0]" [attr.disabled]="disabled == true ? true : null" />Mon</label></div>
+        <div class="checkbox-inline"><label class="checkbox checkbox-inline" [class.disabled]="disabled"><input type="checkbox" (change)="parseValue(2, $event)" [attr.checked]="selected[1]" [attr.disabled]="disabled == true ? true : null" />Tue</label></div>
+        <div class="checkbox-inline"><label class="checkbox checkbox-inline" [class.disabled]="disabled"><input type="checkbox" (change)="parseValue(4, $event)" [attr.checked]="selected[2]" [attr.disabled]="disabled == true ? true : null" />Wed</label></div>
+        <div class="checkbox-inline"><label class="checkbox checkbox-inline" [class.disabled]="disabled"><input type="checkbox" (change)="parseValue(8, $event)" [attr.checked]="selected[3]" [attr.disabled]="disabled == true ? true : null" />Thur</label></div>
+        <div class="checkbox-inline"><label class="checkbox checkbox-inline" [class.disabled]="disabled"><input type="checkbox" (change)="parseValue(16, $event)" [attr.checked]="selected[4]" [attr.disabled]="disabled == true ? true : null" />Fri</label></div>
+        <div class="checkbox-inline"><label class="checkbox checkbox-inline" [class.disabled]="disabled"><input type="checkbox" (change)="parseValue(32, $event)" [attr.checked]="selected[5]" [attr.disabled]="disabled == true ? true : null" />Sat</label></div>
+        <div class="checkbox-inline"><label class="checkbox checkbox-inline" [class.disabled]="disabled"><input type="checkbox" (change)="parseValue(64, $event)" [attr.checked]="selected[6]" [attr.disabled]="disabled == true ? true : null" />Sun</label></div>
+    </div>
+</div>

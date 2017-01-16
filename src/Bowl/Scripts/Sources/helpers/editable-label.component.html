@@ -1,0 +1,18 @@
+﻿<div class="input-group">
+    <span class="input-group-addon" *ngIf="icon"><i class="fa {{icon}}"></i></span>
+    <span class="input-group-addon" *ngIf="prefixLabel">{{prefixLabel}}</span>
+    <input
+        id="input"
+        class="form-control"
+        value="{{value}}"
+        (blur)="onBlur($event)"
+        (keyup)="onChange($event)"
+        [attr.maxLength]="maxLength > 0 ? maxLength : null"
+        [attr.size]="size > 0 ? size : null"
+        [attr.pattern]="pattern.length > 0 ? pattern : null"
+        [attr.disabled]="disabled == true ? true : null"
+        [attr.step]="step > 0? step: null"
+        [attr.type]="type != null ? type : text"
+    />
+    <span class="input-group-addon" *ngIf="suffixLabel">{{suffixLabel}}</span>
+</div>
